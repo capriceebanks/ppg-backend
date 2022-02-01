@@ -16,9 +16,9 @@ app.use(function(req, res, next) {
 
 
 //check
-app.get("/", (req, res) => {
-    res.send('Hello World!');
-  });
+app.get('/', function(req, res) {
+  res.sendFile(path.join(__dirname, '/index.html'));
+});
 
 //GET
 app.get("/posts", (req, res) => {
